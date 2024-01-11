@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
 const HomeHeader = () => {
   const [theme, setTheme] = useState("dark");
   return (
@@ -19,7 +20,9 @@ const HomeHeader = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <NavLink to="/" className={"nav-link"}>
+                Home
+              </NavLink>
               <Nav.Link href="#link">Shop</Nav.Link>
 
               <NavDropdown title="Category" id="basic-nav-dropdown">
@@ -45,8 +48,12 @@ const HomeHeader = () => {
               <Nav.Link href="#user">Cart(0)</Nav.Link>
               <Nav.Link href="#user">Sherlock Holmes</Nav.Link>
               <Nav.Link href="#logout">Logout</Nav.Link>
-              <Nav.Link href="#signup">SignUp</Nav.Link>
-              <Nav.Link href="#login">Login</Nav.Link>
+              <NavLink to="/signup" className={"nav-link"}>
+                SignUp
+              </NavLink>
+              <NavLink to="/login" className={"nav-link"}>
+                Login
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

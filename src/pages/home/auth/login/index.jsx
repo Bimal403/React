@@ -1,4 +1,3 @@
-import HomeHeader from "../../../../component/home/header/home-header.component";
 import { Container, Row, Col } from "react-bootstrap";
 import "./index.css";
 import styled from "styled-components";
@@ -15,8 +14,7 @@ const Divider = styled.hr`
 const LoginPage = () => {
   return (
     <>
-      <HomeHeader />
-      <Container className="login-wrapper m-5">
+      <Container className="login-wrapper my-5">
         <Row>
           <Col sm={12} md={{ offset: 3, span: 6 }}>
             <LoginTitle>Login Page</LoginTitle>
